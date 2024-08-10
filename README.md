@@ -1,1 +1,1 @@
-# FastInsght
+# FastInsight
