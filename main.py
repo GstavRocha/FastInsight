@@ -2,6 +2,6 @@ from fastapi import FastAPI
 
 app = FastAPI()
 
-@app.get("/test")
+@app.get("/")
 async def execute_api():
-    return ["API IS RUNNING"]
+    return {"detail":"Api Running"}

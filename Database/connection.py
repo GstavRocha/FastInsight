@@ -17,6 +17,6 @@ def get_connection(uri):
     except Exception as err:
         print(err, 'Erro', errno)
     finally:
-        print(time.sleep(60))
+        print(time.sleep(6))
         client.close()
 
