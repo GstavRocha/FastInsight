@@ -1,7 +1,7 @@
-from pymongo import MongoClient
+from fastapi import FastAPI
 
-try
+app = FastAPI()
 
-
-if __name__ == '__main__':
-    print('alo2')
+@app.get("/test")
+async def execute_api():
+    return ["API IS RUNNING"]
