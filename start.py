@@ -17,5 +17,5 @@ def load_server():
             
 if __name__ == '__main__':
     print("Start Serve")
-    # subprocess.run(['systemctl start mongod'], shell= True)
+    subprocess.run(['systemctl start mongod'], shell= True)
     load_server()
