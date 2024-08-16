@@ -1,8 +1,8 @@
 kagglehub
-fastapi[all]==0.75.0
-pydantic==1.9
-pymongo[srv]==3.11.0
-python-dotenv==0.19.2
-pytest==7.0.1
+fastapi[all]
+pydantic
+pymongo
+python-dotenv
+pytest
 keras-nlp
 keras
