@@ -1,22 +1,23 @@
 import errno
 import time
+from dotenv import load_dotenv
 from pymongo import MongoClient
+from dotenv import dotenv_values
 
-uri_local = 'mongodb://localhost:27017'
+load_dotenv()
+config = dotenv_values(".env")
+print(config["MONGO_NAME"])
 
 
-
-def get_connection(app,uri):
-    uri = uri_local
-    try:
-        app.mongodb_client= MongoClient([f"{uri}"]);
-        return('connect to database')
+# def get_connection(app,uri):
+#     try:
+#         app.mongodb_client= MongoClient(config["MONGO_NAME"])
+#         app.database = app.mongodb_client[["db_FastInsight"]]
+#         print('connect to database')
         
-    except Exception as err:
-        print(err, 'Erro', errno)
-    finally:
-        print(time.sleep(6))
+#     except Exception as err:
+#         print(err, 'Erro', errno)
     
-def shutdonw_db(app):
-    app.mongodb_client.close()
-    print("data base is closed")
+# def shutdonw_db(app):
+#     app.mongodb_client.close()
+#     print("data base is closed")
