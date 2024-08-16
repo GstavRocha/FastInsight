@@ -1,6 +1,4 @@
-from Database import db_conn, db_link
 from cronometer import execution_time
-import main
 import subprocess
 import time
 
@@ -12,13 +10,12 @@ def database_status():
 
 @execution_time
 def load_server():
-    print('Server Reloading')
+    print('Server Reload')
     subprocess.run(['uvicorn main:app --host 0.0.0.0 --port 8080'], shell=True)
-    db_conn(db_link)
     for i in range(1000000):
         pass 
             
 if __name__ == '__main__':
-    print("Status MongoDB Local")
-    subprocess.run(['systemctl start mongod'], shell= True)
+    print("Start Serve")
+    # subprocess.run(['systemctl start mongod'], shell= True)
     load_server()

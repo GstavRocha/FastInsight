@@ -1,5 +1,6 @@
 .idea/
 .env
 kaggle.json
-env-pymongo-fastapi/
 __pycache__
+env-pymongo-fastapi/
+
