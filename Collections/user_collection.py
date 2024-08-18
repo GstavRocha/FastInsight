@@ -1,7 +1,7 @@
 from Database import db_conn as db
-from options import codec_options
-import pymongo as mongo
-user = {
+from .utils import check_and_create_collection
+
+user ={
     "_id":"ObjectId",
     "username":"string",
     "email":"string",
@@ -10,6 +10,5 @@ user = {
     "updated_at": "datetime"
 }
 
-mongo.create_collection(user, codec, check_exists=True)
+check_and_create_collection("USER", user)
 
-PÁREIAAQ
