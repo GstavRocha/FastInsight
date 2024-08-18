@@ -1,19 +1,25 @@
 from fastapi import FastAPI
-from contextlib import asynccontextmanager
-from Database import db_link, db_conn, db_off
-app = FastAPI()
-db = db_link
+from pymongo import MongoClient
+from pymongo.errors import ConnectionFailure
+from contextlib import asynccontextmanager as assincrono
+from Database import db_conn, db_off, cl
+from Collections import user
 
+user
+@assincrono
+async def lifespan(app: FastAPI):
+    async with db_conn():
+        print('database connection')
+        yield
+        db_off()
+        print('database closed')
+        
+app = FastAPI(lifespan=lifespan)
 @app.get("/")
 async def execute_api():
     return {"detail":"Api Running"}
 
-@asynccontextmanager
-async def connect_db():
-    conn = await db_conn(app, db)
-    off = await db_off()
-    try:
-        yield conn
-    finally:
-        await off
 
+@app.get("/check_bd")
+async def check_bd():
+    return{"Connection": db_conn()}

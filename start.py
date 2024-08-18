@@ -1,4 +1,4 @@
-from cronometer import execution_time
+from cronometer import execution_time   
 import subprocess
 import time
 
@@ -11,7 +11,7 @@ def database_status():
 @execution_time
 def load_server():
     print('Server Reload')
-    subprocess.run(['uvicorn main:app --host 0.0.0.0 --port 8080'], shell=True)
+    subprocess.run(['uvicorn main:app --reload'], shell=True)
     for i in range(1000000):
         pass 
             
