@@ -10,8 +10,7 @@ config = dotenv_values(".env")
 def get_connection():
     global client
     try:
-        client = MongoClient(config["URI"])
-        client.admin.command({"ping":1})
+        client = MongoClient(config["URI_MONGO"])
         print('connect to database')
         return client[config["MONGO_NAME"]]
         
@@ -22,3 +21,5 @@ def get_connection():
 def shutdonw_db():
     client[config["MONGO_NAME"]].close()
     print("Db connection Ended")
+
+print(client)
