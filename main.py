@@ -1,12 +1,11 @@
 from fastapi import FastAPI
 from pymongo import MongoClient
 from pymongo.errors import ConnectionFailure
-from contextlib import asynccontextmanager as assincrono
-from Database import db_conn, db_off, cl
-from Collections import user
+from contextlib import asynccontextmanager as assinc
+from Database import db_conn, db_off
+from Collections import *
 
-user
-@assincrono
+@assinc
 async def lifespan(app: FastAPI):
     async with db_conn():
         print('database connection')
