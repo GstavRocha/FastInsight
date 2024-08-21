@@ -15,11 +15,9 @@ def get_connection():
         return client[config["MONGO_NAME"]]
         
     except Exception as err:
-        print(err, 'Erro', errno)
-        return {'lost':'connection'}
+        print('Erro', err)
+        return {'Erro':err}
     
 def shutdonw_db():
     client[config["MONGO_NAME"]].close()
     print("Db connection Ended")
-
-print(client)

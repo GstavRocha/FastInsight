@@ -21,5 +21,5 @@ async def execute_api():
 
 @app.get("/check_bd")
 async def check_bd():
-    db = await db_conn()
-    return{"Connection": db}
+    db = db_conn()
+    return{"Connection":db.name}

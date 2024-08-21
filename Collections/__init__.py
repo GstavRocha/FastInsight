@@ -1,7 +1,7 @@
 # from Collections.categories_collection import categories
 # from Collections.embeddings_collection import embeddings
 # from Collections.feedback_collection import feedback
-# from Collections.iteractions_collection import interactions
+# from Collections.interactions_collection import interactions
 # from Collections.items_collection import item
 # from Collections.logs_collection import logs
 # from Collections.models_collection import models
