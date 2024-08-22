@@ -4,7 +4,7 @@ from pymongo.errors import ConnectionFailure
 from contextlib import asynccontextmanager
 from Database import db_conn, db_off
 from Collections import *
-
+from Models import *
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     db_conn()
