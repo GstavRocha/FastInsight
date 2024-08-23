@@ -1,14 +1,16 @@
-import pdb
+import pdb as pd
 from datetime import datetime
-from .user_model import User
+from user_model import User
 
 user = User(
     username="Gustavo Rocha",
-    email="nooseguitar",
+    email="nooseguitar@hotmail.com",
     preference=["tech","programming"],
     history=
         [
-            {"item_id":"64d3072f4d4e3e2c2f65ef50","timestamp": datetime.UTC}
+            {"item_id":"64d3072f4d4e3e2c2f65ef50"}
         ]
 )
-print(user)
+
+if __name__ =="__main__":
+    pd.run(user)

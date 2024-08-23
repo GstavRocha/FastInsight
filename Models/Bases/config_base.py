@@ -1,5 +1,7 @@
 from bson import ObjectId
-class Base_Config:
+class Config_Base:
     population_by_name = True
-    json_encoders = {ObjectId: str}
+    json_encoders = {
+        ObjectId: str
+        }
     arbitrary_types_allowed = True

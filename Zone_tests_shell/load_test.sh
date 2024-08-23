@@ -16,7 +16,7 @@ if [ -z "$UVICORN_PID" ]; then
     echo "Uvicorn server not found on port 8000."
     exit 1
 fi
-
+x
 echo "Uvicorn PID: $UVICORN_PID"
 for i in {1..10}
 do  
