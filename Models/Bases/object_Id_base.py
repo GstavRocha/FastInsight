@@ -1,8 +1,8 @@
-from typing import Any
+from typing import *
 from bson import ObjectId
 from pydantic import BaseModel, Field, validator
 
-class PyObjectId(ObjectId):
+class Object_Id(ObjectId):
     @classmethod
     def __get_validators_(cls):
         yield cls.validate
