@@ -5,6 +5,6 @@ from bson import ObjectId
 sessions = Sessions(
     user_id=ObjectId("66ca817906d85adc79a4de70"),
     location="parnamirim",
-    # metadata=[{"action": "teste", "meta1": "teste1"}] 
-)   
+    metadata={"version": 1, "project_name": "AnaliseData"}
+)
 print(sessions)

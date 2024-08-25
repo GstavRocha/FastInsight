@@ -1,6 +1,6 @@
 # COLECTIONS 
 
-### 1. **users**
+### 1. **users** feito
    - **Descrição:** Armazena as informações dos usuários.
    - **Campos sugeridos:**
      ```json
@@ -15,7 +15,7 @@
      }
      ```
 
-### 2. **items**
+### 2. **items** feito
    - **Descrição:** Contém informações sobre os itens que podem ser recomendados (produtos, filmes, cursos, etc.).
    - **Campos sugeridos:**
      ```json
@@ -31,7 +31,7 @@
      }
      ```
 
-### 3. **interactions**
+### 3. **interactions** feito
    - **Descrição:** Registra as interações dos usuários com os itens, como visualizações, compras, cliques, etc.
    - **Campos sugeridos:**
      ```json
@@ -45,7 +45,7 @@
      }
      ```
 
-### 4. **recommendations**
+### 4. **recommendations** feito
    - **Descrição:** Armazena as recomendações feitas para cada usuário.
    - **Campos sugeridos:**
      ```json
@@ -57,7 +57,7 @@
      }
      ```
 
-### 5. **embeddings**
+### 5. **embeddings** feito
    - **Descrição:** Armazena os embeddings gerados para usuários e itens, utilizados pelo sistema de recomendação.
    - **Campos sugeridos:**
      ```json
@@ -71,7 +71,7 @@
      }
      ```
 
-### 6. **logs**
+### 6. **logs** feito
    - **Descrição:** Registra logs de atividades e eventos para monitoramento e auditoria.
    - **Campos sugeridos:**
      ```json
@@ -86,7 +86,7 @@
      }
      ```
 
-### 7. **categories**
+### 7. **categories** feito
    - **Descrição:** Armazena as categorias de itens, permitindo uma organização e filtragem mais eficazes.
    - **Campos sugeridos:**
      ```json
@@ -99,7 +99,7 @@
      }
      ```
 
-### 8. **feedback**
+### 8. **feedback**feito
    - **Descrição:** Armazena feedback dos usuários sobre as recomendações recebidas, permitindo ajuste fino do modelo de IA.
    - **Campos sugeridos:**
      ```json
@@ -114,7 +114,7 @@
      }
      ```
 
-### 9. **sessions**
+### 9. **sessions**feito
    - **Descrição:** Armazena informações sobre as sessões de usuários, útil para análises temporais e contextuais.
    - **Campos sugeridos:**
      ```json
@@ -129,7 +129,7 @@
      }
      ```
 
-### 10. **models**
+### 10. **models** feito
    - **Descrição:** Armazena informações sobre diferentes versões dos modelos de IA utilizados para fazer as recomendações.
    - **Campos sugeridos:**
      ```json

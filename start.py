@@ -2,7 +2,7 @@ from cronometer import execution_time
 import subprocess
 import time
 
-def database_status():
+def database_status(): #falta adicionar o banco de dado
     try:
         time.sleep(5)
     finally:

@@ -9,7 +9,7 @@ class Items(BaseModel):
     description: str
     category: str
     tags: List[Dict[str,str]]
-    metadata: Dict['str', Union[str,int,bool]]
+    metadata: Dict[str, Union[str,int,bool]]
     created_at: Optional[datetime] = Field(default_factory=datetime.now)
     updated_at: Optional[datetime] = Field(default_factory=datetime.now)
     
