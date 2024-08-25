@@ -12,4 +12,4 @@ class User(BaseModel):
     updated_at: Optional[datetime] = Field(default_factory=datetime.now)
     class Config:
         arbitrary_types_allowed = True
-print('it is Ok user')
+print('User Model')

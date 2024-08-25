@@ -1,11 +1,11 @@
 from fastapi import FastAPI
 from pymongo import MongoClient
+from Routers.user_route import use_routers
 from pymongo.errors import ConnectionFailure
 from contextlib import asynccontextmanager
 from Database import db_conn, db_off
 from Collections import *
 from Models import *
-from Models.Bases import *
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     db_conn()
@@ -15,12 +15,14 @@ async def lifespan(app: FastAPI):
     print('database closed')
         
 app = FastAPI(lifespan=lifespan)
-@app.get("/")
+@app.get("/", tags=["Main"])
 async def execute_api():
     return {"detail":"Api Running"}
 
 
-@app.get("/check_bd")
+@app.get("/check_bd", tags=["Main"])
 async def check_bd():
     db = db_conn()
     return{"Connection":db.name}
+
+app.include_router(use_routers)
