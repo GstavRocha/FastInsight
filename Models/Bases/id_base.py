@@ -1,10 +1,12 @@
 from pydantic import BaseModel,Field
 from typing import Optional, List
-from Bases.object_Id_base import Object_Id
-from Bases.config_base import Config_Base
+from bson import ObjectId
+# from object_Id_base import Object_Id
 
 class Base_Id(BaseModel):
-    id: Optional[Object_Id]= Field(default_factory=Object_Id, alias="id")
+    id: Optional[ObjectId]= Field(default_factory=ObjectId, alias="id")
 
-    class Config(Config_Base): # aqui
+    class Config:
+        arbitrary_types_allowed=True
+        print('id bases Ok')
         pass

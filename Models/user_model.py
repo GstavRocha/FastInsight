@@ -1,19 +1,15 @@
 from pydantic import BaseModel,Field,EmailStr
-from typing import Optional,List
-from Bases.object_Id_base import Object_Id
-from Bases.config_base import Config_Base
-from Bases.id_base import Base_Id
-from Bases.history_item_base import History_Item
+from typing import Optional,List,Dict
+from bson import ObjectId
 from datetime import datetime
-
 class User(BaseModel):
-    id: Optional[Object_Id] = Field(default_factory=Object_Id, alias="_id")
+    id: Optional[ObjectId] = Field(default_factory=ObjectId, alias='id_user')
     username: str
     email: EmailStr
-    preference:  List[str]=[]
-    history: List[History_Item()]=[]
-    created_at: Optional[datetime]=Field(default_factory=datetime.now().time())
-    updated_at: Optional[datetime]=Field(default_factory=datetime.now().time())
-    
-    class Config(Config_Base):
-        pass 
+    preference:  List[str]
+    history: List[Dict[ObjectId,datetime]]
+    created_at: Optional[datetime] = Field(default_factory=datetime.now)
+    updated_at: Optional[datetime] = Field(default_factory=datetime.now)
+    class Config:
+        arbitrary_types_allowed = True
+print('it is Ok user')
