@@ -5,3 +5,5 @@ https://www.kaggle.com/models some IA's
 
 https://docs.readthedocs.io/en/stable/ official docummentation about mkdocs
 Github about shellscript https://mange.ifrn.edu.br/shell-script-wikipedia/
+
+export PYTHONPATH=/home/gustavo/Desktop/FastInsight about error modules

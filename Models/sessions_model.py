@@ -1,9 +1,8 @@
-import pdb as debugger
 from pydantic import BaseModel,Field
-from typing import Optional,List,Dict,Union
-from datetime import datetime
+from typing import Optional,Dict,Union
 from bson import ObjectId
-debugger.set_trace()
+from datetime import datetime
+
 class Sessions(BaseModel):
     id: Optional[ObjectId] = Field(default_factory=ObjectId, alias="id_session")
     user_id: ObjectId
@@ -13,5 +12,3 @@ class Sessions(BaseModel):
     metadata: Dict[str, Union[str, int, bool]]
     class Config:
         arbitrary_types_allowed = True
-    
-    print('Session execute')
