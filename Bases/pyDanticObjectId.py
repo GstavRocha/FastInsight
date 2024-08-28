@@ -1,15 +1,13 @@
-import pdb
-from pydantic import BaseModel
-from bson.objectid import ObjectId as Bson_ObjectId
+from bson.objectid import ObjectId
 
-pdb.set_trace()
-class PyDantic_ObjectId_Base(Bson_ObjectId):
+
+class PyObjectId(ObjectId):
     @classmethod
-    def __get__validators__(cls):
+    def __get_validators__(cls):
         yield cls.validate
+
     @classmethod
-    def validate(cls,v):
-        if not isinstance(v,Bson_ObjectId):
-            raise TypeError('ObjectId Required')
+    def validate(cls, v):
+        if not ObjectId.is_valid(v):
+            raise ValueError('Invalid ObjectId')
         return str(v)
-print('Ok')

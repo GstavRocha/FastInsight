@@ -14,15 +14,19 @@ async def lifespan(app: FastAPI):
     db_off()
     print('database closed')
         
-app = FastAPI(lifespan=lifespan)
-@app.get("/", tags=["Main"])
-async def execute_api():
-    return {"detail":"Api Running"}
+try:
+    app = FastAPI(lifespan=lifespan)
+    @app.get("/", tags=["Main"])
+    async def execute_api():
+        return {"detail":"Api Running"}
 
-
-@app.get("/check_bd", tags=["Main"])
-async def check_bd():
-    db = db_conn()
-    return{"Connection":db.name}
-
+    @app.get("/check_bd", tags=["Main"])
+    async def check_bd():
+        db = db_conn()
+        check_bd = db.name
+        return{"Connection":check_bd}
+    db_off()
+except Exception as err:
+    print("erro -->", err)
+    
 app.include_router(use_routers)

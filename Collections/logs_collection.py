@@ -1,11 +1,11 @@
 from .utils import check_and_create_collection
 
 logs = {
-    "_id":"ObjectId",
+    "_id":int,
     "event_type": "string",
     "description": "string",
-    "user_id": "ObjectId",
-    "item_id": "OjectId",
+    "user_id": int,
+    "item_id": int,
     "timestamp":"datetime",
     "metadata": {"key": "value"}
 }

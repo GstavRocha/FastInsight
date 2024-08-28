@@ -1,9 +1,9 @@
 from .utils import check_and_create_collection
 
 categories = {
-    "_id": "ObjectId",
+    "_id": int,
     "category_name": "string",
-    "parent_category": "ObjectId", #for subcategories
+    "parent_category": int, #for subcategories
     "created_at" : "datetime",
     "updated_at": "datetime"
 }

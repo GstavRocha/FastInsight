@@ -1,10 +1,10 @@
 from .utils import check_and_create_collection
 
 item = {
-    "_id":"ObjectId",
+    "_id":int,
     "description": "string",
     "category": "string",
-    "tag": ["string","required"],
+    "tag": ["string","string"],
     "metadata": {"key": "value"},
     "created_at": "datetime",
     "updated_at": "datetime"

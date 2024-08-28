@@ -1,8 +1,8 @@
 from .utils import check_and_create_collection
 
 session = {
-    "_id": "ObjectId",
-    "user_id":"ObjectId",
+    "_id": int,
+    "user_id": int,
     "session_start": "datetime",
     "device_info": "string",
     "location":"string",

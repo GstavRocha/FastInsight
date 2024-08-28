@@ -1,9 +1,9 @@
 from .utils import check_and_create_collection
 
 interactions = {
-    "_id":"ObjectId",
-    "user_id":"ObjectId",
-    "item_id":"ObjectId",
+    "_id":int,
+    "user_id":int,
+    "item_id":int,
     "interaction_type": "string", #ex view, click, purchase
     "timestamp": "datetime",
     "metadata":{"key": "value"}
