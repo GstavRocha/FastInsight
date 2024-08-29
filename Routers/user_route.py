@@ -11,20 +11,46 @@ from typing import Dict,Optional,Union,List
 
 use_routers = APIRouter()
 app = FastAPI()
-@use_routers.get('/test', tags=['database check'], status_code=200)
-async def dbCheck():
+@use_routers.get('/test', tags=['collection check'], status_code=200)
+async def check_collection():
     collection = db_conn()
     db = collection["USER"]
     return {'teste': db.name}
 
-@use_routers.post('/new_user')
+@use_routers.post('/new_user', tags=['New User'])
 async def new_user(user: User):
     database = db_conn()
     collection = database["USER"]
-    user_dict = user.to_dict()
-    query = collection.insert_one(user_dict)
-    return {"detail": user_dict}
+    user_dict = user.model_dump(by_alias=True)
+    collection.insert_one(user_dict)
+    return {"detail": "ok"}
+@use_routers.get('/getUser', tags=["Get User"])
+async def get_user(name: str = Query(...)):
+    database = db_conn()
+    collection = database["USER"]
+    user = collection.find_one({"username": name},{
+        "_id": 1,
+        "username": 1,
+        "preference": 1,
+        "history": 1,
+        "created_at": 1,
+        "updated_at": 1    
+    })
+    print(user)
+    return{"ok": 200}
 
+@use_routers.get('get_id', tags=['Get id User'])
+async def get_user_id(id: str = Query(...)):
+    database = db_conn()
+    collection = database['USER']
+    user = collection.find_one({"id": id},{
+        "_id":1,
+        "usermane": 1,
+        "preference": 1,
+        "history": 1
+    })
+    print(user)
+    return{"ok": 200}
 
 # @use_routers.post('/new_user')
 # async def new_user(
