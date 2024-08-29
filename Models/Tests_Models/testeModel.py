@@ -9,7 +9,7 @@ user = User(
     preference=["tech","programming"],
     history=
         [
-           {ObjectId("64d3072f4d4e3e2c2f65ef50"): datetime.now()}
+           {1: datetime.now()}
         ]
 
 )

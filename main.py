@@ -23,10 +23,9 @@ try:
     @app.get("/check_bd", tags=["Main"])
     async def check_bd():
         db = db_conn()
-        check_bd = db.name
-        return{"Connection":check_bd}
+        return{"Connection":db.name}
     db_off()
 except Exception as err:
-    print("erro -->", err)
+    print("erro MAIN -->", err)
     
 app.include_router(use_routers)

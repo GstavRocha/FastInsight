@@ -4,6 +4,7 @@ from dotenv import dotenv_values
 
 load_dotenv()
 config = dotenv_values(".env")
+client = None
 def db_conn():
     global client
     try:
@@ -21,3 +22,4 @@ def db_off():
     if client:
         client.close()
         print("Db connection Ended")
+print(client)
