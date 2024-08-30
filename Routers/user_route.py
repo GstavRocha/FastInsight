@@ -1,3 +1,4 @@
+from pprint import pprint
 import uuid
 from fastapi import FastAPI,APIRouter,Query, Body
 from fastapi.encoders import jsonable_encoder 
@@ -22,14 +23,17 @@ async def new_user(user: User):
     database = db_conn()
     collection = database["USER"]
     user_dict = user.model_dump(by_alias=True)
+    user_dict['id'] = user_dict.pop('_id')
     collection.insert_one(user_dict)
     return {"detail": "ok"}
+
 @use_routers.get('/getUser', tags=["Get User"])
 async def get_user(name: str = Query(...)):
     database = db_conn()
     collection = database["USER"]
     user = collection.find_one({"username": name},{
         "_id": 1,
+        "id": 1,
         "username": 1,
         "preference": 1,
         "history": 1,
@@ -39,11 +43,11 @@ async def get_user(name: str = Query(...)):
     print(user)
     return{"ok": 200}
 
-@use_routers.get('get_id', tags=['Get id User'])
-async def get_user_id(id: str = Query(...)):
+@use_routers.get('/get_id/{user_id}', tags=['Get id User'])
+async def get_user_id(user_id:str):
     database = db_conn()
     collection = database['USER']
-    user = collection.find_one({"id": id},{
+    user = collection.find_one({"id": user_id},{
         "_id":1,
         "usermane": 1,
         "preference": 1,
@@ -51,27 +55,10 @@ async def get_user_id(id: str = Query(...)):
     })
     print(user)
     return{"ok": 200}
-
-# @use_routers.post('/new_user')
-# async def new_user(
-#     id: Optional[Id],
-#     email: str,
-#     username: str,
-#     userprefer: List[str],
-#     userhist: Optional[Dict[Optional[Id], datetime]] = Body(None)  # Corrigido para receber um dicionário
-# ):
-#     user_id = id
-#     usermail = email
-#     user = username
-#     user_prefe = userprefer
-    
-#     # Inicializa userhist se for None
-#     if userhist is None:
-#         userhist = {}
-
-#     # Adiciona um novo histórico
-#     id_history = Id # Converte o ID para string para usar como chave
-#     date_history = datetime.now()
-#     userhist[id_history] = date_history
-
-#     return {"detail": userhist}
+@use_routers.get("/get_many", tags=["Get All Users"])
+async def get_users():
+    db = db_conn()
+    collection = db['USER']
+    users = list(collection.find())
+    pprint(users)
+    return {"ok",200}

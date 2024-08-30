@@ -1,6 +1,7 @@
 kagglehub
 fastapi[all]
 pydantic
+pydantic[email]
 pymongo
 python-dotenv
 pytest

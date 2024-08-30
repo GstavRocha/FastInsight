@@ -15,7 +15,7 @@ class Item_Id(BaseModel):
     item_it: Optional[int] = Field(default_factory=generate_item_id)
 
 class User(BaseModel):
-    id: Optional[str] = Field(default_factory=generate_id, alias='id')
+    id: Optional[str] = Field(default_factory=generate_id, alias='_id')
     username: str
     email: EmailStr
     preference:  List[str]
