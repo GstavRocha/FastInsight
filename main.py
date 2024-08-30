@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 from pymongo import MongoClient
+# from Routers.sessions_route import session_routers
 from Routers.user_route import use_routers
 from pymongo.errors import ConnectionFailure
 from contextlib import asynccontextmanager
