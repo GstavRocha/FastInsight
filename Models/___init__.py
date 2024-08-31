@@ -9,3 +9,4 @@ from Models.embeddings_model import Embedings
 from Models.feedback_model import Feedback
 from Models.logs_model import Logs
 from Models.models_model import Models
+from Models.generate_id import generate_id

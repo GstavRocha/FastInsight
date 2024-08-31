@@ -23,12 +23,13 @@ async def check_collection():
 async def new_user( user: User):
     database = db_conn()
     collection = database["USER"]
-    user_dict = user.model_dump(by_alias=True,exclude="_id")
+    user.model_dump(by_alias=True,exclude="_id")
+    if collection.find_one({"$or": [{"username": user.username}, {"email": user.email}]}):
+        raise HTTPException(status_code=400, detail="Username or email already exists.")
     id = generate_id()
     created_at= datetime.now()
     updated_at= datetime.now()
-    collection.insert_one(
-        {
+    new_user = {
             "id": id,
             "username": user.username,
             "email": user.email,
@@ -36,11 +37,11 @@ async def new_user( user: User):
             "history": user.history,
             "created_at": created_at,
             "updated_at": updated_at
-        },{"$set": user_dict}
-    )
-    return {"detail": "ok"} #to do verication about exiting user
-
-@use_routers.get('/getUser', tags=['USER ROUTES'], description=' seacher ato get user Id return the firsts values')
+        }
+    collection.insert_one(new_user)
+    return {"id":id}
+ 
+@use_routers.get('/get_user', tags=['USER ROUTES'], description=' seacher ato get user Id return the firsts values')
 async def get_user(name: str = Query(...)):
     database = db_conn()
     collection = database["USER"]
@@ -56,8 +57,9 @@ async def get_user(name: str = Query(...)):
     if user:
         user["_id"] = str(user['_id'])
         return{"ok": user}
+    raise HTTPException(status_code=400, detail="name not found")
 
-@use_routers.get('/get_id/{user_id}', tags=['USER ROUTES'], description='return ')
+@use_routers.get('/get_id/{user_id}', tags=['USER ROUTES'], description='get id no _id ')
 async def get_user_id(user_id:str):
     database = db_conn()
     collection = database['USER']
@@ -70,14 +72,16 @@ async def get_user_id(user_id:str):
     if user:
         user["_id"] = str(user["_id"])
         return{"ok": user}
-    # To write about errors
+    raise HTTPException(status_code=400, detail="id not found")
+
 @use_routers.get("/get_many", tags=['USER ROUTES'])
 async def get_all_users():
-    db = db_conn()
-    collection = db['USER']
+    database = db_conn()
+    collection = database['USER']
     users = list(collection.find())
-    result = jsonable_encoder(users)
-    return {"ok":result}
+    for user in users:
+        user["_id"] = str(user["_id"])
+    return {"ok":users} 
 
 @use_routers.put('/user/{user_id}', tags=['USER ROUTES'])
 async def update_user(user_id: str, user: User):
@@ -86,9 +90,13 @@ async def update_user(user_id: str, user: User):
     update_data = user.model_dump(exclude_unset=True, exclude={"_id","id"})
     result = collection.update_one({"id": user_id}, {"$set": update_data})
     if result.matched_count == 1:
-        return {"detail": "User updated","user": update_user}
-    else:
-        return {"detail": "User not found"}, 404
+        return {"detail": "User updated",
+                "username": user.username, 
+                "email": user.email, 
+                "preference": user.email,
+                "history": user.history
+                }
+    raise HTTPException(status_code=400, detail='user not found')
 @use_routers.delete('/user/{user_id}', tags=['USER ROUTES'])
 async def delete_user(user_id: str):
     database = db_conn()
@@ -96,7 +104,7 @@ async def delete_user(user_id: str):
     result = collection.delete_one({"id": user_id})
     if result.deleted_count == 1:
         return {"detail": 200}
-    return {"detail": "not found"},404
+    raise HTTPException(status_code= 404, detail="id not found")
 @use_routers.patch("/user/{user_id}/{add_history}", tags=['USER ROUTES'])
 async def add_history(user_id: str, add_history: str):
     database = db_conn()

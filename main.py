@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from pymongo import MongoClient
 # from Routers.sessions_route import session_routers
+from Routers import items_routers
 from Routers.user_route import use_routers
 from pymongo.errors import ConnectionFailure
 from contextlib import asynccontextmanager
@@ -31,3 +32,4 @@ except Exception as err:
     print("erro MAIN -->", err)
     
 app.include_router(use_routers)
+app.include_router(items_routers)
