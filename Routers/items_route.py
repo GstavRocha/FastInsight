@@ -44,7 +44,7 @@ async def search_item(search: str):
         return {"ok": item}
     raise HTTPException(status_code=400, detail="Name not found")
   
-@items_routers.post("/items/new_item", tags=["New Items"])
+@items_routers.post("/items/new_item", tags=["Items"])
 async def new_items(items: Items):
     database = db_conn()
     collection = database['Items']
@@ -67,7 +67,7 @@ async def new_items(items: Items):
     insert= collection.insert_one(new_item)
     status = HTTPException(status_code=201, headers="items")
     return {"item": item_id,"status":status }
-@items_routers.put("/items/{id_item}" , tags=["Item Update"])
+@items_routers.put("/items/{id_item}" , tags=["Items"])
 async def item_update(id_item:str, items: Items):
     database = db_conn()
     collection = database["Items"]
@@ -82,7 +82,7 @@ async def item_update(id_item:str, items: Items):
                 "metadata": items.metadata
                 }
     raise HTTPException(status_code=400, detail= "Invalid Data")
-@items_routers.delete("/item/{id_item}", tags=[" Delete Item"])
+@items_routers.delete("/item/{id_item}", tags=["Items"])
 async def delete_item(id_item:str):
     database = db_conn()
     collection = database["Items"]
