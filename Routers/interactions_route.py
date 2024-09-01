@@ -16,7 +16,7 @@ async def get_interactions():
     collection = database["Interactions"]
     results = list(collection.find())
     for result in results:
-        result["id_urse"] = str(result["_id"])
+        result["_id"] = str(result["_id"])
     return {"200":results}
 
 @interactions_router.post("/interactions", tags=["Interactions"])
@@ -27,7 +27,6 @@ async def  new_interaction(id_user: str,id_item:str ,interaction: Interactions):
     item_collection = database["Items"]
     user = user_collection.find_one({"id": id_user})
     item = item_collection.find_one({"id_items": id_item})
-    # #check a user and a item
     id = generate_id()
     new_inter = {
         "id_interactions": id,
@@ -36,8 +35,58 @@ async def  new_interaction(id_user: str,id_item:str ,interaction: Interactions):
         "interaction_tipe":interaction.interactions_tipe,
         "metadata": interaction.metadata
     }
-    interactions_collection.insert_one(new_inter)
-    return {"result": "ok"}
-    # if result.inserted_id:
-    #     return {"ok":200}
-    # raise HTTPException(status_code=400, detail="user id or item id they are mistakes")
+    if user["id"] is not False and item['id_items'] is not False:
+        interactions_collection.insert_one(new_inter)
+        return {"result": "ok"}
+    raise HTTPException(status_code=400, detail="Some Error on Request")
+
+@interactions_router.get("/interactions/user/", tags=["Interactions"])
+async def get_id_interactions(user_id: str = Query(...)):
+    database = db_conn()
+    collections = database["Interactions"]
+    user_interactions_cursor = collections.find({"user_id": user_id})
+    user_interactions = []
+    for interaction in user_interactions_cursor:
+        interaction["_id"] = str(interaction["_id"])
+        user_interactions.append(interaction)
+    if user_interactions:
+        pprint(user_interactions)
+        return {"ok": 200, "interactions": user_interactions}
+    raise HTTPException(status_code=404, detail="User not found", headers="ErroR")
+
+@interactions_router.get("/interactions/item/", tags=["Interactions"])
+async def get_id_interactions(item_id: str = Query(...)):
+    database = db_conn()
+    collections = database["Interactions"]
+    item_interactions_cursor = collections.find({"item_id": item_id})
+    item_interactions = []
+    for interaction in item_interactions_cursor:
+        interaction["_id"] = str(interaction["_id"])
+        item_interactions.append(interaction)
+    if item_interactions:
+        pprint(item_interactions)
+        return {"ok": 200, "interactions": item_interactions}
+    raise HTTPException(status_code=404, detail="Item not found", headers="ErroR")
+
+@interactions_router.put("/interaction/{interaction_id}", tags=["Interactions"])
+async def get_id_interaction(interatcion_id: str, interactions: Interactions):
+    database = db_conn()
+    collection = database["Interactions"]
+    update_data = interactions.model_dump(exclude_unset=True, exclude={"_id", "id_interactions", "user_id", "item_id"})
+    result = collection.update_one({"id_interactions": interatcion_id},{"$set": update_data})
+    if result.matched_count == 1:
+        return{"detail": 200,
+               "user_id": interactions.user_id,
+               "item_id": interactions.item_id,
+               "metadata": interactions.metadata
+        }
+    HTTPException(status_code=400, detail="not found")
+
+@interactions_router.delete("/interactions/{interaction_id}", tags=["Interactions"])
+async def delete_interaction(interaction_id):
+    database = db_conn()
+    collection = database["Interactions"]
+    result = collection.delete_one({"id_interactions": interaction_id})
+    if result.deleted_count == 1:
+        return {"detail": 200}
+    raise HTTPException(status_code=400, detail=" It've some Problem")
