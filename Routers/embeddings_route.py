@@ -86,19 +86,15 @@ async def all_embeddings():
     return {"embeddings": embeddings}
 
 @embeddings_router.get("/embeddings/{entity_id}", tags=["Embeddings"])
-async def get_entity_id(entity_id:str, embeddings: Embeddings):
+async def get_entity_id(entity_id:str):
     database = db_conn()
     collection = database["Embedding"]
-    result = collection.find({"entity_id": entity_id})
-    pprint(result)
-    return {"Embeddings": "entity_id",
-            "id_embeddings": embeddings.id_embeddings,
-            "entity_id": embeddings.entity_id,
-            "entity_type": embeddings.entity_type,
-            "embedding_vector": embeddings.embedings_vector,
-            "created_at": embeddings.created_at,
-            "updated_at": embeddings.update_at
-            }
+    results = collection.find({"entity_id": entity_id})
+    embeddgins = []
+    for result in results:
+        result["_id"] = str(result["_id"])
+        embeddgins.append(result)
+    return {"result":embeddgins}
 @embeddings_router.delete("/embeddings/{id_embedding}", tags=["Embeddings"])
 async def delete_embedding(id_embedding: str):
     database = db_conn()
@@ -107,3 +103,4 @@ async def delete_embedding(id_embedding: str):
     if result.deleted_count == 1:
         return {"was deleted id_embedding", 200}
     raise HTTPException(status_code=404, detail=" id_embedding not found")
+ 
