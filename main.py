@@ -1,9 +1,7 @@
 from fastapi import FastAPI
 from pymongo import MongoClient
 # from Routers.sessions_route import session_routers
-from Routers.interactions_route import interactions_router
-from Routers import items_routers
-from Routers.user_route import use_routers
+from Routers import items_routers,interactions_router,embeddings_router, use_routers, recomendation_router
 from pymongo.errors import ConnectionFailure
 from contextlib import asynccontextmanager
 from Database import db_conn, db_off
@@ -35,3 +33,5 @@ except Exception as err:
 app.include_router(use_routers)
 app.include_router(items_routers)
 app.include_router(interactions_router)
+app.include_router(embeddings_router)
+app.include_router(recomendation_router)
