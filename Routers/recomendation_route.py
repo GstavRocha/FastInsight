@@ -79,3 +79,12 @@ async def update_user_recommendation(id_recommendation: str, recommendation: Rec
             return {"status": 200, "recommendation": updated_recommendation}
     
     raise HTTPException(status_code=400, detail="Recommendation not updated")
+
+@recomendation_router.delete("/recommendation/{id_recomendation}", tags=["Recommendations"])
+async def delete_recommendation(id_recomendation: str):
+    database = db_conn()
+    collection = database["Recomendations"]
+    result = collection.delete_one({"id_recomendation": id_recomendation})
+    if result.deleted_count == 1:
+        return {"status": "Recommendation deleted"}
+    raise HTTPException(status_code=404, detail="No found Recommendation")
