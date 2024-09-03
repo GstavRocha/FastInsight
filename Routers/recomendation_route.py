@@ -1,5 +1,7 @@
 from pprint import pprint
+import numpy as np
 from fastapi import FastAPI,APIRouter, Query, HTTPException
+from fastapi.encoders import jsonable_encoder
 from pymongo import MongoClient
 from Models.user_model import User
 from Models.items_model import Items
@@ -8,6 +10,7 @@ from Models.generate_id import generate_id
 from Database import db_conn
 from datetime import datetime
 from typing import Dict, Optional, Union, List
+from Math_utils.cosine_similarity import cosine_similarity
 
 recomendation_routers = APIRouter()
 @recomendation_routers.post("/recommendation", tags=["Recommendations"])
@@ -88,3 +91,38 @@ async def delete_recommendation(id_recomendation: str):
     if result.deleted_count == 1:
         return {"status": "Recommendation deleted"}
     raise HTTPException(status_code=404, detail="No found Recommendation")
+
+@recomendation_routers.get("/recommend/{user_id}", tags=["Recommendations"], description="Recomendation and using coseno similarity")
+def recommend_items(user_id: str):
+    database = db_conn()
+    user_embedding_collection = database["User_Embeddings"]
+    item_embedding_collection = database["Item_Embeddings"]
+    item_collection = database["Items"]
+    insert_recomendations=database["Recomendations"]
+
+    user_embedding = user_embedding_collection.find_one({"user_id": user_id})
+    if not user_embedding:
+        raise HTTPException(status_code=404, detail="User embedding not found")
+    
+    user_vector = user_embedding["embedding_vector"]
+    recommendations = []
+    for item in item_collection.find():
+        item_id = item["id_items"]
+        item_embedding = item_embedding_collection.find_one({"item_id": item_id})
+
+        if item_embedding:
+            item_vector = item_embedding["embedding_vector"]
+            similarity = cosine_similarity(user_vector, item_vector)
+            recommendation = {
+                "item_id": item_id,
+                "user_id": user_id,
+                "item_name": item["name"],
+                "similarity": similarity,
+                "timestamp": datetime.now()
+            }
+            recommendations.append(recommendation)
+            json_recommendation = jsonable_encoder(recommendation)
+            insert_recomendations.insert_one(json_recommendation)
+    recommendations.sort(key=lambda x: x["similarity"], reverse=True)
+    
+    return {"recommendations": recommendations}

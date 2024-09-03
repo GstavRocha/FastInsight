@@ -1,0 +1,12 @@
+name: env_ai_recomendation
+channels: 
+  - conda-forge
+dependencies:
+  - python=3.11
+  - pandas
+  - tensorflow
+  - matplotlib
+  - scikit-learn
+  - pip:
+    - tensorflow
+    

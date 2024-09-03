@@ -3,3 +3,5 @@
 kaggle.json
 __pycache__/
 env-pymongo-fastapi/
+env_ai_recomendation/
+Baby_Products.csv

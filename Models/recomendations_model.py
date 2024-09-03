@@ -10,4 +10,3 @@ class Recomendations(BaseModel):
     created_at: Optional[datetime] = Field(default_factory=datetime.now)
     class Config:
         arbitrary_types_allowed = True
-print("recomendations on test")
