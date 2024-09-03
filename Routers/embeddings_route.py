@@ -9,8 +9,8 @@ from Database import db_conn
 from datetime import datetime
 from typing import Dict, Optional, Union, List
 
-embeddings_router = APIRouter()
-@embeddings_router.post("/embeggings", tags=['Embeddings'])
+embeddings_routers = APIRouter()
+@embeddings_routers.post("/embeggings", tags=['Embeddings'])
 async def new_embedding(embedding_check: str, embeddings: Embeddings):
     database = db_conn()
     collection = database["Embedding"]
@@ -56,7 +56,7 @@ async def new_embedding(embedding_check: str, embeddings: Embeddings):
     else:
         raise HTTPException(status_code=400, detail="ID not found in user or item collections")
 
-@embeddings_router.patch("/embeddings/{add_vector}/{id_embedding}", tags=['Embeddings'])
+@embeddings_routers.patch("/embeddings/{add_vector}/{id_embedding}", tags=['Embeddings'])
 async def add_vector(add_vector: float, id_embedding: str):
     database = db_conn()
     collection = database["Embedding"]
@@ -76,7 +76,7 @@ async def add_vector(add_vector: float, id_embedding: str):
     else:
         raise HTTPException(status_code=404, detail="Embedding not found")
 
-@embeddings_router.get("/embeddings", tags=["Embeddings"])
+@embeddings_routers.get("/embeddings", tags=["Embeddings"])
 async def all_embeddings():
     database = db_conn()
     collection = database["Embedding"]
@@ -85,7 +85,7 @@ async def all_embeddings():
        embedding["_id"] = str(embedding["_id"])
     return {"embeddings": embeddings}
 
-@embeddings_router.get("/embeddings/{entity_id}", tags=["Embeddings"])
+@embeddings_routers.get("/embeddings/{entity_id}", tags=["Embeddings"])
 async def get_entity_id(entity_id:str):
     database = db_conn()
     collection = database["Embedding"]
@@ -95,7 +95,7 @@ async def get_entity_id(entity_id:str):
         result["_id"] = str(result["_id"])
         embeddgins.append(result)
     return {"result":embeddgins}
-@embeddings_router.delete("/embeddings/{id_embedding}", tags=["Embeddings"])
+@embeddings_routers.delete("/embeddings/{id_embedding}", tags=["Embeddings"])
 async def delete_embedding(id_embedding: str):
     database = db_conn()
     collection = database["Embedding"]

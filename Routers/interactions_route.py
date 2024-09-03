@@ -9,8 +9,8 @@ from Database import db_conn
 from datetime import datetime
 from typing import Dict, Optional, Union, List
 
-interactions_router = APIRouter()
-@interactions_router.get("/all_interactions/", tags=["Interactions"])
+interactions_routers = APIRouter()
+@interactions_routers.get("/all_interactions/", tags=["Interactions"])
 async def get_interactions():
     database = db_conn()
     collection = database["Interactions"]
@@ -19,7 +19,7 @@ async def get_interactions():
         result["_id"] = str(result["_id"])
     return {"200":results}
 
-@interactions_router.post("/interactions", tags=["Interactions"])
+@interactions_routers.post("/interactions", tags=["Interactions"])
 async def  new_interaction(id_user: str,id_item:str ,interaction: Interactions):
     database = db_conn()
     interactions_collection = database["Interactions"]
@@ -40,7 +40,7 @@ async def  new_interaction(id_user: str,id_item:str ,interaction: Interactions):
         return {"result": "ok"}
     raise HTTPException(status_code=400, detail="Some Error on Request")
 
-@interactions_router.get("/interactions/user/", tags=["Interactions"])
+@interactions_routers.get("/interactions/user/", tags=["Interactions"])
 async def get_id_interactions(user_id: str = Query(...)):
     database = db_conn()
     collections = database["Interactions"]
@@ -54,7 +54,7 @@ async def get_id_interactions(user_id: str = Query(...)):
         return {"ok": 200, "interactions": user_interactions}
     raise HTTPException(status_code=404, detail="User not found", headers="ErroR")
 
-@interactions_router.get("/interactions/item/", tags=["Interactions"])
+@interactions_routers.get("/interactions/item/", tags=["Interactions"])
 async def get_id_interactions(item_id: str = Query(...)):
     database = db_conn()
     collections = database["Interactions"]
@@ -68,7 +68,7 @@ async def get_id_interactions(item_id: str = Query(...)):
         return {"ok": 200, "interactions": item_interactions}
     raise HTTPException(status_code=404, detail="Item not found", headers="ErroR")
 
-@interactions_router.put("/interaction/{interaction_id}", tags=["Interactions"])
+@interactions_routers.put("/interaction/{interaction_id}", tags=["Interactions"])
 async def get_id_interaction(interatcion_id: str, interactions: Interactions):
     database = db_conn()
     collection = database["Interactions"]
@@ -82,7 +82,7 @@ async def get_id_interaction(interatcion_id: str, interactions: Interactions):
         }
     HTTPException(status_code=400, detail="not found")
 
-@interactions_router.delete("/interactions/{interaction_id}", tags=["Interactions"])
+@interactions_routers.delete("/interactions/{interaction_id}", tags=["Interactions"])
 async def delete_interaction(interaction_id):
     database = db_conn()
     collection = database["Interactions"]

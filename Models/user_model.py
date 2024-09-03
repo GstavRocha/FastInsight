@@ -1,5 +1,3 @@
-import uuid
-import random
 from pydantic import BaseModel,Field,EmailStr
 from typing import Optional,List,Dict
 from datetime import datetime
@@ -16,5 +14,4 @@ class User(BaseModel):
     
     class Config:
         arbitrary_types_allowed = True
-        # json_encoders = {datetime: lambda v: v.isoformat()}
 print('User Model')

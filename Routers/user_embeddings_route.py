@@ -10,8 +10,8 @@ from Database import db_conn
 from datetime import datetime
 from typing import Dict, Optional, Union, List
 
-user_embedding_router = APIRouter()
-@user_embedding_router.post("/user_embeddings/{user_id}", tags=["User Embeddings"])
+user_embedding_routers = APIRouter()
+@user_embedding_routers.post("/user_embeddings/{user_id}", tags=["User Embeddings"])
 async def add_user_embedding(user_id: str, embedding_vector: List[float]):
     database = db_conn()
     collection = database["User_Embeddings"]
@@ -29,7 +29,7 @@ async def add_user_embedding(user_id: str, embedding_vector: List[float]):
     if result.matched_count > 0 or result.upserted_id:
         return {"status": "Embedding add or update"}
     raise HTTPException(status_code=500, detail="Failed to add/update embedding")
-@user_embedding_router.patch("/user_embeddings/{user_id}/{add_vector}", tags=['User Embeddings'])
+@user_embedding_routers.patch("/user_embeddings/{user_id}/{add_vector}", tags=['User Embeddings'])
 async def add_vector_user_embeddings(user_id_check: str, add_vector: float):
     database = db_conn()
     collection = database["User_Embeddings"]
@@ -53,7 +53,7 @@ async def add_vector_user_embeddings(user_id_check: str, add_vector: float):
 
     
         
-@user_embedding_router.get("/user_embeddings/{user_id}", tags=['User Embeddings'])
+@user_embedding_routers.get("/user_embeddings/{user_id}", tags=['User Embeddings'])
 async def get_user_embedding(user_id: str):
     database = db_conn()
     collection = database["User_Embeddings"]

@@ -9,8 +9,8 @@ from Database import db_conn
 from datetime import datetime
 from typing import Dict, Optional, Union, List
 
-recomendation_router = APIRouter()
-@recomendation_router.post("/recommendation", tags=["Recommendations"])
+recomendation_routers = APIRouter()
+@recomendation_routers.post("/recommendation", tags=["Recommendations"])
 async def get_user_id(recomendation_check: str, recomendation:Recomendations):
     database = db_conn()
     collection = database["Recomendations"]
@@ -32,7 +32,7 @@ async def get_user_id(recomendation_check: str, recomendation:Recomendations):
         return {"status": "Recommendation created/updated", "id_recommendation": id_recommedation}
     raise HTTPException(status_code=500, detail="Recommendation not created/updated")
 
-@recomendation_router.get("/recommendations/{user_id}", tags=["Recommendations"])
+@recomendation_routers.get("/recommendations/{user_id}", tags=["Recommendations"])
 async def get_all_recommendation(user_id:str):
     database = db_conn()
     collection = database["Recomendations"]
@@ -42,7 +42,7 @@ async def get_all_recommendation(user_id:str):
         return{"status": 200, "recommendations": results}
     raise HTTPException(status_code=404, detail="No recommendations found for this user")
 
-@recomendation_router.put("/recommendation/{user_id}", tags=["Recommendations"])
+@recomendation_routers.put("/recommendation/{user_id}", tags=["Recommendations"])
 async def update_user_recommendation(user_id: str, recommendation: Recomendations):
     database = db_conn()
     collection = database["Recomendations"]
@@ -60,7 +60,7 @@ async def update_user_recommendation(user_id: str, recommendation: Recomendation
             return {"status": 200, "recommendation": updated_recommendation}
         raise HTTPException(status_code=404,detail="id user not found")
     raise HTTPException(status_code=404, detail=" Recommendation not Not")
-@recomendation_router.patch("/recommendation/{id_recommendation}", tags=["Recommendations"])
+@recomendation_routers.patch("/recommendation/{id_recommendation}", tags=["Recommendations"])
 async def update_user_recommendation(id_recommendation: str, recommendation: Recomendations):
     database = db_conn()
     collection = database["Recomendations"]
@@ -80,7 +80,7 @@ async def update_user_recommendation(id_recommendation: str, recommendation: Rec
     
     raise HTTPException(status_code=400, detail="Recommendation not updated")
 
-@recomendation_router.delete("/recommendation/{id_recomendation}", tags=["Recommendations"])
+@recomendation_routers.delete("/recommendation/{id_recomendation}", tags=["Recommendations"])
 async def delete_recommendation(id_recomendation: str):
     database = db_conn()
     collection = database["Recomendations"]
