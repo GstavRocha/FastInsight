@@ -1,0 +1,102 @@
+
+id_items,name,description,category,tags,metadata,created_at,updated_at
+1,"Mamadeiras","Mamadeira de vidro para recém-nascidos","Alimentação","['vidro','segurança','recém-nascido']",{'marca':'Avent','volume':240,'BPA_Free':True},2024-09-04,2024-09-04
+2,"Chupetas","Chupeta ortodôntica para bebês","Acessórios","['ortodôntica','silicone','0-6 meses']",{'marca':'MAM','BPA_Free':True},2024-09-04,2024-09-04
+3,"Fraldas descartáveis","Fralda descartável tamanho RN","Higiene","['descartável','recém-nascido','absorção']",{'marca':'Pampers','tamanho':'RN','quantidade':36},2024-09-04,2024-09-04
+4,"Fraldas de pano","Fralda de pano reutilizável","Higiene","['reutilizável','ecológica','algodão']",{'marca':'EcoBaby','tamanho':'Único'},2024-09-04,2024-09-04
+5,"Lenços umedecidos","Lenços umedecidos para pele sensível","Higiene","['sensível','hipoalergênico','sem perfume']",{'marca':'Huggies','quantidade':96},2024-09-04,2024-09-04
+6,"Toalhas de banho","Toalha de banho com capuz","Banho","['macia','algodão','absorvente']",{'marca':'BabyJoy','material':'algodão'},2024-09-04,2024-09-04
+7,"Roupas de recém-nascido","Conjunto de roupas para recém-nascidos","Vestuário","['confortável','algodão','respirável']",{'marca':'BabyGap','tamanho':'RN'},2024-09-04,2024-09-04
+8,"Body de manga longa","Body de manga longa para bebês","Vestuário","['algodão','confortável','RN-12 meses']",{'marca':'Carter's','tamanho':'6 meses'},2024-09-04,2024-09-04
+9,"Body de manga curta","Body de manga curta para bebês","Vestuário","['confortável','respirável','verão']",{'marca':'H&M','tamanho':'3 meses'},2024-09-04,2024-09-04
+10,"Calças com pé","Calça com pé em algodão para bebês","Vestuário","['algodão','confortável','térmico']",{'marca':'BabyCotton','tamanho':'6 meses'},2024-09-04,2024-09-04
+11,"Macacão","Macacão de malha para bebês","Vestuário","['algodão','confortável','térmico']",{'marca':'TipTop','tamanho':'9 meses'},2024-09-04,2024-09-04
+12,"Mijão","Calça mijão em algodão","Vestuário","['algodão','confortável','respirável']",{'marca':'Gerber','tamanho':'3 meses'},2024-09-04,2024-09-04
+13,"Mantas","Manta de algodão para bebês","Acessórios","['algodão','confortável','térmico']",{'marca':'Chicco','tamanho':'90x90cm'},2024-09-04,2024-09-04
+14,"Babadores","Babador impermeável para bebês","Alimentação","['impermeável','ajustável','0-12 meses']",{'marca':'Skip Hop','material':'silicone'},2024-09-04,2024-09-04
+15,"Carrinho de bebê","Carrinho de bebê dobrável e leve","Transporte","['dobrável','leve','compacto']",{'marca':'Graco','peso_suportado':'15kg'},2024-09-04,2024-09-04
+16,"Berço portátil","Berço portátil com mosquiteiro","Dormitório","['portátil','mosquiteiro','dobrável']",{'marca':'Safety 1st','material':'poliéster'},2024-09-04,2024-09-04
+17,"Cadeirinha de carro","Cadeirinha de carro com ISOFIX","Segurança","['ISOFIX','segurança','0-18kg']",{'marca':'Maxi-Cosi','tamanho':'0-18kg'},2024-09-04,2024-09-04
+18,"Mochila maternidade","Mochila maternidade multifuncional","Acessórios","['multifuncional','resistente','impermeável']",{'marca':'Skip Hop','material':'poliéster'},2024-09-04,2024-09-04
+19,"Termômetro digital","Termômetro digital para bebês","Saúde","['digital','preciso','rápido']",{'marca':'Braun','tempo_leitura':'2s'},2024-09-04,2024-09-04
+20,"Escova de cabelo","Escova de cabelo macia para bebês","Higiene","['macia','cerdas naturais','0-12 meses']",{'marca':'Philips Avent','material':'cerdas naturais'},2024-09-04,2024-09-04
+21,"Banheira dobrável","Banheira dobrável para bebês","Banho","['dobrável','compacto','seguro']",{'marca':'Stokke','material':'plástico resistente'},2024-09-04,2024-09-04
+22,"Almofada de amamentação","Almofada de amamentação ergonômica","Alimentação","['ergonômica','confortável','suporte']",{'marca':'Boppy','material':'algodão'},2024-09-04,2024-09-04
+23,"Porta leite em pó","Porta leite em pó com divisórias","Alimentação","['divisórias','portátil','fácil limpeza']",{'marca':'Tommee Tippee','material':'plástico'},2024-09-04,2024-09-04
+24,"Kit escova e pente","Kit escova e pente para bebês","Higiene","['macia','cabelo fino','delicado']",{'marca':'Chicco','material':'plástico e cerdas naturais'},2024-09-04,2024-09-04
+25,"Colher de silicone","Colher de silicone para bebês","Alimentação","['silicone','flexível','seguro']",{'marca':'Nuby','material':'silicone'},2024-09-04,2024-09-04
+26,"Travesseiro antissufocante","Travesseiro antissufocante para bebês","Dormitório","['seguro','respirável','antissufocante']",{'marca':'Baby Pil','material':'espuma ventilada'},2024-09-04,2024-09-04
+27,"Babá eletrônica","Babá eletrônica com câmera","Segurança","['câmera','áudio bidirecional','noturna']",{'marca':'Motorola','alcance':'300m'},2024-09-04,2024-09-04
+28,"Trocador portátil","Trocador portátil impermeável","Higiene","['portátil','impermeável','almofadado']",{'marca':'Skip Hop','material':'poliéster'},2024-09-04,2024-09-04
+29,"Mordedor","Mordedor de silicone para dentição","Acessórios","['silicone','dentição','macio']",{'marca':'Sophie la Girafe','material':'silicone'},2024-09-04,2024-09-04
+30,"Tapete de atividades","Tapete de atividades com arco","Brinquedos","['interativo','macio','colorido']",{'marca':'Fisher-Price','material':'poliéster'},2024-09-04,2024-09-04
+31,"Canguru","Canguru ergonômico para bebês","Transporte","['ergonômico','ajustável','seguro']",{'marca':'Ergobaby','peso_suportado':'20kg'},2024-09-04,2024-09-04
+32,"Cadeirinha de refeição","Cadeirinha de refeição dobrável","Alimentação","['dobrável','ajustável','segura']",{'marca':'Peg Perego','material':'plástico'},2024-09-04,2024-09-04
+33,"Lixeira de fraldas","Lixeira de fraldas com pedal","Higiene","['pedal','anti-odor','compacta']",{'marca':'Tommee Tippee','capacidade':'30 fraldas'},2024-09-04,2024-09-04
+34,"Protetor solar para carrinho","Protetor solar ajustável para carrinho","Acessórios","['ajustável','UV50+','fácil instalação']",{'marca':'Jolly Jumper','material':'poliéster'},2024-09-04,2024-09-04
+35,"Kit manicure","Kit de manicure para bebês","Higiene","['seguro','delicado','cortes precisos']",{'marca':'Safety 1st','material':'aço inox'},2024-09-04,2024-09-04
+36,"Copo de transição","Copo de transição com bico de silicone","Alimentação","['bico silicone','antivazamento','alças removíveis']",{'marca':'Nuk','capacidade':'150ml'},2024-09-04,2024-09-04
+37,"Andador","Andador com brinquedos interativos","Brinquedos","['interativo','ajustável','seguro']",{'marca':'Chicco','peso_suportado':'12kg'},2024-09-04,2024-09-04
+38,"Escova de dentes","Escova de dentes infantil","Higiene","['infantil','cerdas macias','0-2 anos']",{'marca':'Oral-B','material':'plástico'},2024-09-04,2024-09-04
+39,"Mobile para berço","Mobile musical para berço","Brinquedos","['musical','giratório','colorido']",{'marca':'Tiny Love','material':'plástico'},2024-09-04,2024-09-04
+40,"Kit alimentação","Kit de alimentação com prato e colher","Alimentação","['seguro','colorido','fácil limpeza']",{'marca':'Skip Hop','material':'plástico'},2024-09-04,2024-09-04
+41,"Chapéu de sol","Chapéu de sol com proteção UV","Vestuário","['UV50+','ajustável','respirável']",{'marca':'Jan & Jul','tamanho':'Único'},2024-09-04,2024-09-04
+42,"Protetor de berço","Protetor de berço respirável","Dormitório","['respirável','seguro','lavável']",{'marca':'BreathableBaby','material':'poliéster'},2024-09-04,2024-09-04
+43,"Cadeirinha de descanso","Cadeirinha de descanso vibratória","Brinquedos","['vibratória','musical','segura']",{'marca':'Fisher-Price','peso_suportado':'9kg'},2024-09-04,2024-09-04
+44,"Garrafa térmica","Garrafa térmica para mamadeiras","Acessórios","['térmica','portátil','fácil limpeza']",{'marca':'Thermos','capacidade':'500ml'},2024-09-04,2024-09-04
+45,"Travesseiro para carrinho","Travesseiro ergonômico para carrinho","Acessórios","['ergonômico','confortável','ajustável']",{'marca':'Boppy','material':'algodão'},2024-09-04,2024-09-04
+46,"Aspirador nasal","Aspirador nasal manual para bebês","Saúde","['manual','higiênico','fácil uso']",{'marca':'NoseFrida','material':'plástico'},2024-09-04,2024-09-04
+47,"Saco de dormir","Saco de dormir para bebês","Dormitório","['térmico','confortável','seguro']",{'marca':'Halo','material':'algodão'},2024-09-04,2024-09-04
+48,"Cadeira de balanço","Cadeira de balanço para bebês","Brinquedos","['balanço','seguro','confortável']",{'marca':'BabyBjorn','peso_suportado':'13kg'},2024-09-04,2024-09-04
+49,"Cortador de unhas","Cortador de unhas para bebês","Higiene","['seguro','preciso','compacto']",{'marca':'Piyo Piyo','material':'aço inox'},2024-09-04,2024-09-04
+50,"Mosquiteiro","Mosquiteiro para carrinho de bebê","Acessórios","['portátil','ajustável','lavável']",{'marca':'Diono','material':'poliéster'},2024-09-04,2024-09-04
+51,"Chocalho","Chocalho de pelúcia para bebês","Brinquedos","['pelúcia','macio','colorido']",{'marca':'Lamaze','material':'plush'},2024-09-04,2024-09-04
+52,"Tapete antiderrapante","Tapete antiderrapante para banheira","Banho","['antiderrapante','seguro','lavável']",{'marca':'Skip Hop','material':'borracha'},2024-09-04,2024-09-04
+53,"Bebê conforto","Bebê conforto com alça","Segurança","['seguro','portátil','confortável']",{'marca':'Graco','peso_suportado':'13kg'},2024-09-04,2024-09-04
+54,"Colchão para berço","Colchão antissufocante para berço","Dormitório","['antissufocante','ortopédico','respirável']",{'marca':'Lolly','material':'espuma ventilada'},2024-09-04,2024-09-04
+55,"Mordedor refrigerável","Mordedor refrigerável para dentição","Acessórios","['refrigerável','silicone','dentição']",{'marca':'Nuby','material':'silicone'},2024-09-04,2024-09-04
+56,"Trocador de fraldas","Trocador de fraldas portátil e impermeável","Higiene","['portátil','impermeável','almofadado']",{'marca':'Skip Hop','material':'poliéster'},2024-09-04,2024-09-04
+57,"Troninho","Troninho educativo para bebês","Higiene","['educativo','portátil','fácil limpeza']",{'marca':'BabyBjorn','material':'plástico'},2024-09-04,2024-09-04
+58,"Jogo de lençol","Jogo de lençol para berço","Dormitório","['algodão','confortável','macio']",{'marca':'Bambi','tamanho':'berço'},2024-09-04,2024-09-04
+59,"Pratinho com ventosa","Pratinho com ventosa para bebês","Alimentação","['ventosa','antiderrapante','fácil limpeza']",{'marca':'Nuk','material':'plástico'},2024-09-04,2024-09-04
+60,"Colher térmica","Colher térmica que muda de cor","Alimentação","['térmica','segura','educativa']",{'marca':'Munchkin','material':'silicone'},2024-09-04,2024-09-04
+61,"Almofada de posicionamento","Almofada de posicionamento para bebês","Dormitório","['posicionamento','segura','confortável']",{'marca':'Clevamama','material':'espuma'},2024-09-04,2024-09-04
+62,"Porta-chupeta","Porta-chupeta com alça","Acessórios","['higiênico','portátil','lavável']",{'marca':'MAM','material':'plástico'},2024-09-04,2024-09-04
+63,"Babador bandana","Babador bandana de algodão","Alimentação","['algodão','estiloso','absorvente']",{'marca':'Aden + Anais','material':'algodão'},2024-09-04,2024-09-04
+64,"Cesto de brinquedos","Cesto organizador de brinquedos","Acessórios","['organizador','portátil','durável']",{'marca':'3 Sprouts','material':'lona'},2024-09-04,2024-09-04
+65,"Copo antivazamento","Copo antivazamento com alças","Alimentação","['antivazamento','alças','fácil limpeza']",{'marca':'Philips Avent','capacidade':'200ml'},2024-09-04,2024-09-04
+66,"Mamadeira anti-cólica","Mamadeira anti-cólica com válvula","Alimentação","['anti-cólica','válvula','fácil limpeza']",{'marca':'Dr. Brown's','capacidade':'250ml'},2024-09-04,2024-09-04
+67,"Protetor solar para carrinho","Protetor solar UV para carrinho","Acessórios","['UV50+','ajustável','fácil instalação']",{'marca':'Diono','material':'poliéster'},2024-09-04,2024-09-04
+68,"Bebê reborn","Boneca bebê reborn","Brinquedos","['realista','detalhado','feito à mão']",{'marca':'Ashton-Drake','material':'vinil'},2024-09-04,2024-09-04
+69,"Canguru","Canguru ergonômico para bebês","Acessórios","['ergonômico','ajustável','seguro']",{'marca':'Ergobaby','material':'algodão'},2024-09-04,2024-09-04
+70,"Carrinho de gêmeos","Carrinho de bebê duplo","Acessórios","['duplo','ajustável','compacto']",{'marca':'Bugaboo','material':'alumínio'},2024-09-04,2024-09-04
+71,"Cadeirinha para carro","Cadeirinha para carro com ISOFIX","Segurança","['ISOFIX','ajustável','segura']",{'marca':'Cybex','peso_suportado':'18kg'},2024-09-04,2024-09-04
+72,"Bloco de montar","Bloco de montar para bebês","Brinquedos","['educativo','colorido','seguro']",{'marca':'Mega Bloks','material':'plástico'},2024-09-04,2024-09-04
+73,"Porta-fórmula","Porta-fórmula com divisórias","Alimentação","['divisórias','portátil','higiênico']",{'marca':'Philips Avent','material':'plástico'},2024-09-04,2024-09-04
+74,"Mochila maternidade","Mochila maternidade impermeável","Acessórios","['impermeável','organizada','fácil limpeza']",{'marca':'Skip Hop','material':'poliéster'},2024-09-04,2024-09-04
+75,"Saboneteira infantil","Saboneteira infantil de parede","Banho","['prática','colorida','durável']",{'marca':'Ubbi','material':'plástico'},2024-09-04,2024-09-04
+76,"Toalha de banho com capuz","Toalha de banho com capuz e orelhas","Banho","['algodão','macia','fofa']",{'marca':'Aden + Anais','material':'algodão'},2024-09-04,2024-09-04
+77,"Porta-leite em pó","Porta-leite em pó com divisórias","Alimentação","['portátil','divisórias','higiênico']",{'marca':'Tommee Tippee','material':'plástico'},2024-09-04,2024-09-04
+78,"Colar de âmbar","Colar de âmbar para dentição","Acessórios","['dentição','natural','seguro']",{'marca':'Baltic Wonder','material':'âmbar'},2024-09-04,2024-09-04
+79,"Carrinho 3 em 1","Carrinho de bebê 3 em 1","Acessórios","['3 em 1','ajustável','compacto']",{'marca':'Chicco','material':'alumínio'},2024-09-04,2024-09-04
+80,"Trava para gavetas","Trava de segurança para gavetas","Segurança","['segura','fácil instalação','resistente']",{'marca':'Safety 1st','material':'plástico'},2024-09-04,2024-09-04
+81,"Banheira dobrável","Banheira dobrável para bebês","Banho","['dobrável','portátil','fácil armazenamento']",{'marca':'Stokke','material':'plástico'},2024-09-04,2024-09-04
+82,"Tapete de atividades","Tapete de atividades educativo","Brinquedos","['educativo','macio','colorido']",{'marca':'Fisher-Price','material':'plush'},2024-09-04,2024-09-04
+83,"Kit escova e pente","Kit escova e pente para bebês","Higiene","['macio','seguro','ergonômico']",{'marca':'Chicco','material':'plástico'},2024-09-04,2024-09-04
+84,"Toalha umedecida","Toalha umedecida para bebês","Higiene","['hidratante','suave','dermatologicamente testada']",{'marca':'Huggies','quantidade':'100 unidades'},2024-09-04,2024-09-04
+85,"Protetor de tomada","Protetor de tomada para bebês","Segurança","['seguro','fácil instalação','resistente']",{'marca':'Safety 1st','material':'plástico'},2024-09-04,2024-09-04
+86,"Suporte para banheira","Suporte dobrável para banheira","Banho","['dobrável','portátil','seguro']",{'marca':'Skip Hop','material':'metal'},2024-09-04,2024-09-04
+87,"Cortina blackout","Cortina blackout para quarto de bebê","Dormitório","['blackout','isolante','ajustável']",{'marca':'Deconovo','material':'poliéster'},2024-09-04,2024-09-04
+88,"Bota de lã","Bota de lã para bebês","Vestuário","['macia','quentinha','confortável']",{'marca':'Zutano','material':'lã'},2024-09-04,2024-09-04
+89,"Cesto de roupa suja","Cesto de roupa suja para bebês","Acessórios","['portátil','lavável','organizador']",{'marca':'3 Sprouts','material':'lona'},2024-09-04,2024-09-04
+90,"Bolsa térmica","Bolsa térmica para mamadeiras","Acessórios","['térmica','portátil','fácil transporte']",{'marca':'Tommee Tippee','material':'poliéster'},2024-09-04,2024-09-04
+91,"Protetor de canto","Protetor de canto para móveis","Segurança","['macio','seguro','fácil instalação']",{'marca':'Roving Cove','material':'borracha'},2024-09-04,2024-09-04
+92,"Capa de chuva para carrinho","Capa de chuva para carrinho de bebê","Acessórios","['impermeável','ajustável','portátil']",{'marca':'Manito','material':'plástico'},2024-09-04,2024-09-04
+93,"Trava para porta","Trava de segurança para portas","Segurança","['seguro','fácil instalação','resistente']",{'marca':'Dreambaby','material':'plástico'},2024-09-04,2024-09-04
+94,"Kit primeiros socorros","Kit de primeiros socorros para bebês","Saúde","['completo','portátil','seguro']",{'marca':'Safety 1st','material':'diversos'},2024-09-04,2024-09-04
+95,"Jogo americano","Jogo americano infantil","Alimentação","['colorido','antiderrapante','lavável']",{'marca':'ezpz','material':'silicone'},2024-09-04,2024-09-04
+96,"Redutor de assento","Redutor de assento para vaso sanitário","Higiene","['portátil','ajustável','fácil limpeza']",{'marca':'BabyBjorn','material':'plástico'},2024-09-04,2024-09-04
+97,"Capa para cadeirinha","Capa protetora para cadeirinha","Acessórios","['protetora','impermeável','fácil instalação']",{'marca':'Summer Infant','material':'poliéster'},2024-09-04,2024-09-04
+98,"Prendedor de chupeta","Prendedor de chupeta com cordão","Acessórios","['higiênico','portátil','seguro']",{'marca':'MAM','material':'poliéster'},2024-09-04,2024-09-04
+99,"Kit escova dental","Kit de escova dental para bebês","Higiene","['cabo ergonômico','cerdas macias','seguro']",{'marca':'Jordan','material':'plástico'},2024-09-04,2024-09-04
+100,"Banheira inflável","Banheira inflável para bebês","Banho","['inflável','portátil','segura']",{'marca':'Munchkin','material':'plástico'},2024-09-04,2024-09-04
