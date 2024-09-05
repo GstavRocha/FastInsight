@@ -1,0 +1,51 @@
+_id,user_id,recomended_items,created_at
+6cb8499a-127c-4249-96ee-799527cfa88c,user_13,"[{'item_id': 'item_16', 'score': 0.95}, {'item_id': 'item_80', 'score': 0.81}, {'item_id': 'item_1', 'score': 0.94}]",2024-09-04T18:04:42.549547
+9a6e2246-7977-41c7-b47e-402a6adb1f04,user_42,"[{'item_id': 'item_33', 'score': 0.62}, {'item_id': 'item_24', 'score': 0.66}, {'item_id': 'item_93', 'score': 0.65}, {'item_id': 'item_60', 'score': 0.76}]",2024-09-04T18:04:42.550850
+74248f5a-8c43-4fb6-a6ec-d94135314db7,user_47,"[{'item_id': 'item_100', 'score': 0.81}, {'item_id': 'item_28', 'score': 0.58}, {'item_id': 'item_5', 'score': 0.74}]",2024-09-04T18:04:42.559014
+495b683f-db1c-465c-b229-e95ad2713188,user_12,"[{'item_id': 'item_25', 'score': 0.91}]",2024-09-04T18:04:42.559663
+4ba2e096-5fbb-4c85-a414-b3398a83e702,user_33,"[{'item_id': 'item_98', 'score': 0.99}, {'item_id': 'item_29', 'score': 0.85}, {'item_id': 'item_73', 'score': 0.58}]",2024-09-04T18:04:42.559898
+88e0632a-46f6-485a-93a9-2ca52420f42a,user_18,"[{'item_id': 'item_98', 'score': 0.56}]",2024-09-04T18:04:42.560241
+2a915d05-69a8-4ba6-81c3-b563d0ac3091,user_47,"[{'item_id': 'item_45', 'score': 0.59}, {'item_id': 'item_74', 'score': 0.92}, {'item_id': 'item_26', 'score': 0.62}]",2024-09-04T18:04:42.565220
+0d454a7c-df5c-4205-b26c-1159fd6bfd61,user_17,"[{'item_id': 'item_53', 'score': 0.58}, {'item_id': 'item_6', 'score': 0.52}, {'item_id': 'item_41', 'score': 0.79}, {'item_id': 'item_97', 'score': 0.73}, {'item_id': 'item_10', 'score': 0.84}]",2024-09-04T18:04:42.566183
+d540fee2-578b-41f7-bd21-5bbb027f66dc,user_35,"[{'item_id': 'item_96', 'score': 0.98}, {'item_id': 'item_61', 'score': 0.78}, {'item_id': 'item_55', 'score': 0.64}, {'item_id': 'item_66', 'score': 0.94}]",2024-09-04T18:04:42.566260
+60721bc1-690c-475a-bc2b-235f15551c58,user_20,"[{'item_id': 'item_4', 'score': 0.83}, {'item_id': 'item_93', 'score': 0.59}, {'item_id': 'item_66', 'score': 0.56}]",2024-09-04T18:04:42.566325
+b8af3b3d-b125-4198-a107-4ec1fb74fd0a,user_44,"[{'item_id': 'item_25', 'score': 0.58}, {'item_id': 'item_74', 'score': 0.7}, {'item_id': 'item_29', 'score': 0.96}, {'item_id': 'item_72', 'score': 0.7}, {'item_id': 'item_98', 'score': 0.98}]",2024-09-04T18:04:42.566385
+c50a0501-3947-463e-a83c-5987c6367be3,user_39,"[{'item_id': 'item_85', 'score': 0.5}, {'item_id': 'item_69', 'score': 0.76}, {'item_id': 'item_45', 'score': 0.88}]",2024-09-04T18:04:42.566432
+db8fdb75-fd96-43f5-ae14-c6421fa0f2fa,user_15,"[{'item_id': 'item_96', 'score': 0.74}, {'item_id': 'item_18', 'score': 0.76}, {'item_id': 'item_43', 'score': 0.59}]",2024-09-04T18:04:42.566460
+2c556cc9-243d-492e-8289-5cc993da3c2e,user_3,"[{'item_id': 'item_65', 'score': 0.5}, {'item_id': 'item_28', 'score': 0.75}, {'item_id': 'item_7', 'score': 0.61}, {'item_id': 'item_93', 'score': 0.68}]",2024-09-04T18:04:42.566489
+28fbd162-fd3d-4a4c-a126-5ebca7537817,user_6,"[{'item_id': 'item_39', 'score': 0.78}, {'item_id': 'item_86', 'score': 0.69}, {'item_id': 'item_88', 'score': 0.5}, {'item_id': 'item_49', 'score': 0.73}]",2024-09-04T18:04:42.566567
+bdbb639c-20ea-477b-a3cb-401714975748,user_46,"[{'item_id': 'item_21', 'score': 0.79}, {'item_id': 'item_52', 'score': 0.62}]",2024-09-04T18:04:42.566631
+297c5d37-e8fa-4952-9ad6-01a801a4d2c5,user_3,"[{'item_id': 'item_97', 'score': 0.81}, {'item_id': 'item_29', 'score': 0.6}, {'item_id': 'item_84', 'score': 0.75}, {'item_id': 'item_21', 'score': 0.76}]",2024-09-04T18:04:42.566674
+fa69e981-f333-46ed-b4fc-0584a799b2e2,user_45,"[{'item_id': 'item_13', 'score': 0.91}, {'item_id': 'item_35', 'score': 0.61}]",2024-09-04T18:04:42.566696
+afcbc919-b91a-43a7-ae39-2258001c2dee,user_9,"[{'item_id': 'item_42', 'score': 0.87}]",2024-09-04T18:04:42.566720
+b0e1bd99-c305-43cb-ba50-e5ecb7b301e0,user_32,"[{'item_id': 'item_52', 'score': 0.73}, {'item_id': 'item_34', 'score': 0.99}, {'item_id': 'item_68', 'score': 0.78}, {'item_id': 'item_84', 'score': 0.72}, {'item_id': 'item_43', 'score': 0.62}]",2024-09-04T18:04:42.566743
+4755a151-cdff-4f8a-b5e8-83c91d62a069,user_20,"[{'item_id': 'item_55', 'score': 0.8}, {'item_id': 'item_34', 'score': 0.8}, {'item_id': 'item_54', 'score': 0.8}, {'item_id': 'item_29', 'score': 0.9}]",2024-09-04T18:04:42.566791
+bf348968-b9d1-4d98-a3ad-8153bd1c1ce1,user_47,"[{'item_id': 'item_34', 'score': 0.86}, {'item_id': 'item_73', 'score': 0.76}, {'item_id': 'item_46', 'score': 0.88}, {'item_id': 'item_71', 'score': 0.72}]",2024-09-04T18:04:42.566812
+3a1bdd90-7e45-40ec-adb3-55cde1ae78d0,user_27,"[{'item_id': 'item_54', 'score': 0.84}, {'item_id': 'item_70', 'score': 0.85}]",2024-09-04T18:04:42.566827
+8f378b86-2bd6-4490-9bdc-d6dc952d706f,user_4,"[{'item_id': 'item_16', 'score': 0.87}, {'item_id': 'item_30', 'score': 0.53}]",2024-09-04T18:04:42.566872
+d8b89e48-1970-4134-a677-4e070d08a3ef,user_9,"[{'item_id': 'item_49', 'score': 0.89}, {'item_id': 'item_84', 'score': 0.8}]",2024-09-04T18:04:42.566939
+d52cb117-f4ef-4c8a-8de0-a3c3926a92ab,user_8,"[{'item_id': 'item_91', 'score': 0.83}, {'item_id': 'item_78', 'score': 0.62}, {'item_id': 'item_4', 'score': 0.82}, {'item_id': 'item_28', 'score': 0.95}]",2024-09-04T18:04:42.567010
+7213ebb8-c612-47fe-bec2-2ae53a1cea9a,user_39,"[{'item_id': 'item_98', 'score': 0.68}]",2024-09-04T18:04:42.567085
+f9e304ff-2d66-4ec7-ac76-b11c3bb140e9,user_24,"[{'item_id': 'item_1', 'score': 0.96}, {'item_id': 'item_55', 'score': 0.75}, {'item_id': 'item_65', 'score': 0.97}, {'item_id': 'item_15', 'score': 0.66}, {'item_id': 'item_96', 'score': 0.57}]",2024-09-04T18:04:42.567156
+6bf55e9f-8be1-4040-89f8-b126dd64c2fc,user_20,"[{'item_id': 'item_29', 'score': 0.73}, {'item_id': 'item_72', 'score': 0.82}, {'item_id': 'item_91', 'score': 0.97}]",2024-09-04T18:04:42.567211
+aa378a47-815b-41e4-b896-6e16c1a88fe2,user_1,"[{'item_id': 'item_19', 'score': 0.76}, {'item_id': 'item_26', 'score': 0.94}]",2024-09-04T18:04:42.567406
+311b4970-424a-4ef2-ab94-39f64527052e,user_25,"[{'item_id': 'item_51', 'score': 0.51}, {'item_id': 'item_34', 'score': 0.6}, {'item_id': 'item_32', 'score': 0.76}]",2024-09-04T18:04:42.567537
+0040af94-3713-4bca-a3a3-00118210f9db,user_26,"[{'item_id': 'item_22', 'score': 0.54}, {'item_id': 'item_76', 'score': 0.69}, {'item_id': 'item_79', 'score': 0.97}, {'item_id': 'item_59', 'score': 0.99}]",2024-09-04T18:04:42.567590
+e35ac191-ed8e-406c-958a-f5cbaacf9820,user_36,"[{'item_id': 'item_35', 'score': 0.82}, {'item_id': 'item_68', 'score': 0.72}, {'item_id': 'item_83', 'score': 0.84}]",2024-09-04T18:04:42.567635
+3bfe8d8e-cb3a-44fc-8439-c79a7e329b14,user_46,"[{'item_id': 'item_38', 'score': 0.66}, {'item_id': 'item_58', 'score': 0.76}, {'item_id': 'item_90', 'score': 0.55}, {'item_id': 'item_85', 'score': 0.59}]",2024-09-04T18:04:42.567707
+1e19bbbc-9b6d-4f2d-8e1f-3d72613bf63f,user_27,"[{'item_id': 'item_74', 'score': 0.55}, {'item_id': 'item_46', 'score': 0.82}, {'item_id': 'item_13', 'score': 0.97}, {'item_id': 'item_57', 'score': 0.53}, {'item_id': 'item_2', 'score': 0.71}]",2024-09-04T18:04:42.567757
+467d948f-cf82-4e06-a87a-2f4f6afc302a,user_22,"[{'item_id': 'item_45', 'score': 0.93}, {'item_id': 'item_50', 'score': 0.66}, {'item_id': 'item_39', 'score': 0.82}, {'item_id': 'item_21', 'score': 0.67}, {'item_id': 'item_58', 'score': 0.94}]",2024-09-04T18:04:42.567796
+fee06be0-1e79-45c9-bb55-3fa864d8f2b7,user_7,"[{'item_id': 'item_94', 'score': 0.55}]",2024-09-04T18:04:42.567832
+a123dda5-c022-457e-9937-d62543ed535f,user_44,"[{'item_id': 'item_69', 'score': 0.75}, {'item_id': 'item_13', 'score': 0.71}]",2024-09-04T18:04:42.567854
+f84820d4-8889-4989-9160-0d7c6df2cfcc,user_49,"[{'item_id': 'item_4', 'score': 0.63}, {'item_id': 'item_83', 'score': 0.89}, {'item_id': 'item_76', 'score': 0.9}, {'item_id': 'item_46', 'score': 0.73}, {'item_id': 'item_28', 'score': 0.57}]",2024-09-04T18:04:42.567873
+dfbe648f-5680-47a5-aa0b-87717205f097,user_39,"[{'item_id': 'item_56', 'score': 0.93}, {'item_id': 'item_67', 'score': 0.79}, {'item_id': 'item_52', 'score': 0.86}, {'item_id': 'item_52', 'score': 0.73}]",2024-09-04T18:04:42.567890
+ba8d1760-f154-4608-873c-c6b2bfc4ef4d,user_47,"[{'item_id': 'item_91', 'score': 0.94}, {'item_id': 'item_67', 'score': 0.62}]",2024-09-04T18:04:42.567919
+cfdbf1c7-e1a0-40a5-8286-1baf3c21a848,user_46,"[{'item_id': 'item_90', 'score': 0.67}, {'item_id': 'item_64', 'score': 0.77}, {'item_id': 'item_61', 'score': 0.93}, {'item_id': 'item_43', 'score': 0.69}, {'item_id': 'item_55', 'score': 0.63}]",2024-09-04T18:04:42.567976
+3d418ef4-cb36-4c35-a75a-7af4a76fa19e,user_13,"[{'item_id': 'item_77', 'score': 0.83}, {'item_id': 'item_73', 'score': 0.6}, {'item_id': 'item_78', 'score': 0.67}, {'item_id': 'item_22', 'score': 0.63}]",2024-09-04T18:04:42.568037
+7fe5b04a-d178-4753-a87b-89990162f5ab,user_26,"[{'item_id': 'item_49', 'score': 0.53}, {'item_id': 'item_67', 'score': 0.82}, {'item_id': 'item_11', 'score': 0.96}, {'item_id': 'item_13', 'score': 0.54}, {'item_id': 'item_24', 'score': 0.71}]",2024-09-04T18:04:42.568100
+41fff43d-209f-4e91-8178-cb1ddf0fc67a,user_19,"[{'item_id': 'item_66', 'score': 0.8}, {'item_id': 'item_95', 'score': 0.97}, {'item_id': 'item_70', 'score': 0.62}]",2024-09-04T18:04:42.568260
+24e11a45-4f4b-4fb2-9868-f58a7d6a47e9,user_26,"[{'item_id': 'item_32', 'score': 0.77}, {'item_id': 'item_86', 'score': 0.55}, {'item_id': 'item_45', 'score': 0.76}, {'item_id': 'item_40', 'score': 0.6}]",2024-09-04T18:04:42.568600
+df5a3f57-8351-48c3-9a31-0a3740412409,user_33,"[{'item_id': 'item_63', 'score': 0.64}]",2024-09-04T18:04:42.568804
+352f46d2-c4f0-4aef-95fe-e0fde4ebc507,user_15,"[{'item_id': 'item_40', 'score': 0.97}, {'item_id': 'item_35', 'score': 0.9}]",2024-09-04T18:04:42.569190
+e90bd21a-db8b-4c3e-bcf4-b1582082a497,user_31,"[{'item_id': 'item_4', 'score': 0.98}, {'item_id': 'item_72', 'score': 0.9}, {'item_id': 'item_15', 'score': 0.84}, {'item_id': 'item_56', 'score': 0.91}, {'item_id': 'item_3', 'score': 0.58}]",2024-09-04T18:04:42.569614
+555132b1-9cc2-4783-a438-e24e18fa4047,user_5,"[{'item_id': 'item_69', 'score': 0.95}, {'item_id': 'item_82', 'score': 0.85}, {'item_id': 'item_62', 'score': 0.66}, {'item_id': 'item_37', 'score': 0.81}, {'item_id': 'item_34', 'score': 0.55}]",2024-09-04T18:04:42.569822

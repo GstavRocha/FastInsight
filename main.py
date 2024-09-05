@@ -7,6 +7,8 @@ from contextlib import asynccontextmanager
 from Database import db_conn, db_off
 from Collections import *
 from Models import *
+from fastapi.middleware.cors import CORSMiddleware
+
 @asynccontextmanager
 async def lifespan(app: FastAPI):
     db_conn()
@@ -16,6 +18,13 @@ async def lifespan(app: FastAPI):
     print('database closed')
         
 try:
+    app = FastAPI(lifespan=lifespan)
+    app.add_middleware(
+        CORSMiddleware,
+        allow_credentials=True,
+        allow_methods=["*"],
+        allow_headers=["*"]
+    )
     app = FastAPI(lifespan=lifespan)
     @app.get("/", tags=["Main"])
     async def execute_api():

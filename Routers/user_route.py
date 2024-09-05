@@ -5,7 +5,7 @@ from fastapi.responses import ORJSONResponse
 from pymongo import MongoClient, ReadPreference
 from Models.user_model import User
 from Models.generate_id import generate_id
-from Database import db_conn
+from Database import db_conn, db_off
 from datetime import date, datetime
 from typing import Dict,Optional,Union,List
 from datetime import datetime
