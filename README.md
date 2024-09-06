@@ -41,7 +41,8 @@
 - **Automação em Marketing**: Baseado nas interações do usuário, o sistema pode sugerir campanhas de marketing mais eficientes, automatizando a segmentação de público-alvo.
 
 - **Gerenciamento e Monitoramento Automatizado**: A automação com Shell Script e subprocessos facilita o monitoramento e a manutenção do sistema, permitindo execuções programadas de backup, deploys contínuos, e otimização de performance de maneira autônoma.
-  - 
+
+
 ```mermaid
 flowchart TD
     Start[Start] --> CheckData[Verificar Dados de Entrada]
